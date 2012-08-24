@@ -16,6 +16,7 @@ object PluginBuild extends Build {
 			Map(
 				"version" -> "6",
 				"sslConnectorClass" -> "SslSocketConnector",
+				"headersize" -> "setHeaderBufferSize",
 				"imports" -> """                                
 				import org.mortbay.jetty.{Server, Handler}
 				import org.mortbay.jetty.handler.ContextHandlerCollection
@@ -37,6 +38,7 @@ object PluginBuild extends Build {
 			Map(
 				"version" -> "7",
 				"sslConnectorClass" -> "SslSelectChannelConnector",
+				"headersize" -> "setRequestHeaderSize",
 				"imports" -> """
 				import org.eclipse.jetty.server.{Server, Handler}
 				import org.eclipse.jetty.server.handler.ContextHandlerCollection

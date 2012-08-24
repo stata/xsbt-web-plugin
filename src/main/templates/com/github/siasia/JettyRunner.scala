@@ -53,6 +53,7 @@ class Jetty${version}Runner extends Runner {
 	private def configureConnector(port: Int) {
 		val conn = new SelectChannelConnector
 		conn.setPort(port)
+		conn.setHeaderBufferSize(32*1024)
 		server.addConnector(conn)
 	}
         
